@@ -1,0 +1,57 @@
+section {
+  max-width: 1200px;
+  min-height: 200vh;
+  margin: 0 auto;
+  background: lightblue;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+section .item {
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.items1 {
+  grid-row: 1/3;
+  grid-column: 2/4;
+  background-color: red;
+}
+.items1 .container1 {
+  width: 100%;
+  height: 100vh;
+}
+.items1 .container1 h1 {
+  text-align: center;
+}
+.items1 .container2 {
+  width: 100%;
+  height: 100vh;
+}
+.items1 .container2 h2 {
+  text-align: center;
+}
+
+.items2 {
+  grid-column: 1;
+}
+
+.items3 {
+  grid-column: 4;
+}
+
+.items2, .items3 {
+  grid-row: 1/4;
+  background-color: beige;
+}
+
+/*# sourceMappingURL=style.css.map */
