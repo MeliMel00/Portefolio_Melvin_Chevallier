@@ -1,0 +1,25 @@
+header {
+    height: 5vh;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: var(--main-color);
+
+    nav {
+        display: flex;
+        float: right;
+        
+
+        .burger {
+        text-align: center;
+        width: 10vw;
+        margin: 15px;
+        background-color: var(--button-color);
+
+        a {
+        color: white;
+        text-decoration: none;
+        }
+        }
+
+    }
+}

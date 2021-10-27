@@ -1,36 +1,10 @@
-header {
-    height: 5vh;
-    width: 100%;
-    margin-bottom: 15px;
-
-    nav {
-        display: flex;
-        float: right;
-
-        .burger {
-        text-align: center;
-        width: 10vw;
-        margin: 15px;
-        background-color: wheat;
-
-        a {
-        color: white;
-        text-decoration: none;
-        }
-        }
-
-    }
-}
 
 section {
-    max-width: 1200px;
-    min-height: 200vh;
     margin: 0 auto;
     background: lightblue;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 20vw 1fr 20vw;
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
     .item {
         height: 100%;
         border: 1px solid black;
@@ -41,7 +15,6 @@ section {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-        gap: 10px;
 
 
         
@@ -53,11 +26,11 @@ section {
 
     .items1 {
         grid-row: 1/3;
-        grid-column: 2/4;
+        grid-column: 2;
         background-color: red;
         .container1{
             width: 100%;
-            height: 100vh;
+            height: 90vh;
 
             h1{
                 text-align: center;
@@ -65,10 +38,23 @@ section {
         }
         .container2{
             width: 100%;
-            height: 100vh;
+            height: 90vh;
 
             h2 {
                 text-align: center;
+            }
+            .title-myself {
+                width: 100%;
+                height: auto;
+            }
+            .desc-profil {
+                height: auto;
+                width: 100%;
+                margin-top: 55px;
+
+                p {
+                    padding: 15px;
+                }
             }
         }
     }
@@ -76,10 +62,10 @@ section {
         grid-column: 1;
     }
     .items3 {
-        grid-column: 4;
+        grid-column: 3;
     }
     .items2, .items3 {
         grid-row: 1/4;
-        background-color:beige;
+        background-color:white;
     }
 
