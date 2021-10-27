@@ -2,7 +2,7 @@ section {
   margin: 0 auto;
   background: lightblue;
   display: grid;
-  grid-template-columns: 20vw 1fr 20vw;
+  grid-template-columns: 10% 1fr 10%;
   grid-template-rows: repeat(2, 1fr);
 }
 section .item {
@@ -67,6 +67,16 @@ section .item {
   --main-color: rgb(235, 232, 232);
 }
 
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
 header {
   height: 5vh;
   width: 100%;
@@ -75,9 +85,17 @@ header {
 }
 header nav {
   display: flex;
-  float: right;
+}
+header nav .nav-right {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+}
+header nav .nav-left {
+  width: 40%;
 }
 header nav .burger {
+  display: block;
   text-align: center;
   width: 10vw;
   margin: 15px;
@@ -85,7 +103,9 @@ header nav .burger {
 }
 header nav .burger a {
   color: white;
-  text-decoration: none;
+}
+header nav .home a {
+  color: #000;
 }
 
 footer {
@@ -95,6 +115,65 @@ footer {
 }
 footer p {
   text-align: center;
+}
+
+.container-competence {
+  height: auto;
+  grid-column: 2;
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 55vh 10vh;
+}
+.container-competence .designer {
+  height: 55vh;
+  grid-row: 1;
+  grid-column: 1/3;
+  background-color: #666363;
+  text-align: center;
+}
+.container-competence .desc {
+  padding: 15px;
+  margin-bottom: 2vh;
+}
+.container-competence .tools {
+  height: auto;
+}
+.container-competence .tools .tools-app {
+  display: flex;
+  flex-direction: column;
+}
+.container-competence .tools .tools-app ul {
+  margin: 0.5vh;
+}
+.container-competence .title-designer, .container-competence .title-developper {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-competence .developper {
+  height: 55vh;
+  grid-row: 1;
+  grid-column: 4/-1;
+  background-color: #666363;
+  text-align: center;
+}
+
+.container_profil {
+  grid-row: 1;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_profil h1 {
+  padding: 2vh;
+}
+.container_profil img {
+  width: 10vh;
 }
 
 /*# sourceMappingURL=style.css.map */

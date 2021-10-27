@@ -1,0 +1,45 @@
+.container-competence {
+    height: auto;
+    grid-column: 2;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 55vh 10vh;
+
+    .designer {
+        height: 55vh;
+        grid-row: 1;
+        grid-column: 1/3;
+        background-color:rgb(102, 99, 99) ;
+        text-align: center;
+    }
+.desc{
+    padding: 15px;
+    margin-bottom: 2vh;
+}
+
+.tools{
+    height: auto;
+    .tools-app {
+        display: flex;
+        flex-direction: column;
+        ul {
+            margin: 0.5vh;
+        }
+    }
+}
+.title-designer, .title-developper {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    .developper {
+        height: 55vh;
+        grid-row: 1;
+        grid-column: 4/-1;
+        background-color:rgb(102, 99, 99) ;
+        text-align: center;
+    }
+}

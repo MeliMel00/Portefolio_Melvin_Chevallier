@@ -6,20 +6,34 @@ header {
 
     nav {
         display: flex;
-        float: right;
+
+        .nav-right {
+            width: 60%;
+            display: flex;
+            justify-content: end;
+        }
+        .nav-left {
+            width: 40%;
+        }
         
-
         .burger {
-        text-align: center;
-        width: 10vw;
-        margin: 15px;
-        background-color: var(--button-color);
+            display: block;
+            text-align: center;
+            width: 10vw;
+            margin: 15px;
+            background-color: var(--button-color);
 
-        a {
-        color: white;
-        text-decoration: none;
+            a {
+            color: white;
+            }
         }
+        
+        .home {
+            a {
+                color: #000;
+            }
         }
-
+        
     }
+
 }

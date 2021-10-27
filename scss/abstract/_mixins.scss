@@ -3,7 +3,7 @@ section {
     margin: 0 auto;
     background: lightblue;
     display: grid;
-    grid-template-columns: 20vw 1fr 20vw;
+    grid-template-columns: 10% 1fr 10%;
     grid-template-rows: repeat(2, 1fr);
     .item {
         height: 100%;
