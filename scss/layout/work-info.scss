@@ -2,7 +2,9 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
     .iwork1{
+        width: 50%;
         grid-column: 1/3;
+        grid-row: 1;
         margin-top: 25px;
     }
     .title-project{
@@ -31,4 +33,31 @@
             grid-column: 3/ -1;
             grid-row: 2/-1;
         }
+}
+
+@media screen and (max-width:800px) {
+    .gallery-info{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+        .title-project, .iwork1, .user-info, .project-info, .desc-project{
+            grid-column: 1;
+        }
+        .title-project{
+            grid-row: 1;
+        }
+        .iwork1 {
+            grid-row: 2;
+        }
+        .user-info{
+            grid-row:3 ;
+        }
+        .project-info{
+            grid-row:4 ;
+        }
+        .desc-project{
+            grid-row: 5;
+        }
+
+    }
 }

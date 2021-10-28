@@ -5,26 +5,32 @@ header {
     background-color: var(--main-color);
 
     nav {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 5vh;
+        flex-direction: row;
 
-        .nav-right {
-            width: 60%;
-            display: flex;
-            justify-content: end;
+        .right {
+            grid-column: 5;
         }
-        .nav-left {
-            width: 40%;
+        .right1 {
+            grid-column: -1;
+        }
+        .left {
+            grid-column: 1;
         }
         
-        .burger {
+        ul {
             display: block;
             text-align: center;
-            width: 10vw;
+            width: 15vw;
             margin: 15px;
-            background-color: var(--button-color);
+            
 
             a {
             color: white;
+            padding: 1vh 1vw 1vh 1vw;
+            background-color: var(--button-color);
             }
         }
         
@@ -36,4 +42,20 @@ header {
         
     }
 
+    @media screen and (max-width:800px) {
+        nav {
+            font-size: 1.2vh;
+            display: inline-block;
+            grid-template-columns: 1fr;
+            
+            width: 100%;
+            ul {
+                display: inline-block;
+                width: 20vw;
+            }
+            .left, .right, .right1 {
+                grid-column: 1;
+            }
+        }
+    }
 }

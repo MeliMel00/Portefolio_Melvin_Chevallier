@@ -43,3 +43,26 @@
         text-align: center;
     }
 }
+@media screen and (max-width:800px) {
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .container-competence{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 1;
+        grid-row:1;
+        gap: 5vh;
+        .designer{
+            grid-column: 1;
+            grid-row: 1;
+            height: 65vh;
+        }
+        .developper{
+            grid-column: 1;
+            grid-row: 2;
+            height: 65vh;
+        }
+    }
+}
