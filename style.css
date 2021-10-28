@@ -1,5 +1,6 @@
 section {
   margin: 0 auto;
+  min-height: 70vh;
   background: lightblue;
   display: grid;
   grid-template-columns: 10% 1fr 10%;
@@ -178,6 +179,7 @@ footer p {
 
 .container-gallery {
   height: auto;
+  width: 100%;
   grid-column: 2;
   grid-row: 1/-1;
   display: grid;
@@ -185,16 +187,79 @@ footer p {
   grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
-.container-gallery .gallery {
-  height: 20vh;
-  width: 100%;
-}
-.container-gallery .gallery .image1 {
+.container-gallery .image {
   width: 100%;
   height: 20vh;
-  grid-column: 1;
-  grid-row: 1;
   background-color: beige;
+  background-size: cover;
+  background-position: center;
+}
+.container-gallery .image:hover {
+  opacity: 0.5;
+  background-size: 110%;
+  background-position: center;
+}
+
+.work1 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.work2 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.work2 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.work3 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.work4 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.work5 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.work6 {
+  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+}
+
+.gallery-info {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.gallery-info .iwork1 {
+  grid-column: 1/3;
+  margin-top: 25px;
+}
+.gallery-info .title-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  grid-column: 3/-1;
+}
+.gallery-info .user-info {
+  grid-column: 1/3;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gallery-info .project-info {
+  grid-row: 3;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gallery-info .desc-project {
+  grid-column: 3/-1;
+  grid-row: 2/-1;
 }
 
 /*# sourceMappingURL=style.css.map */

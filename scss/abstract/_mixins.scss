@@ -1,6 +1,7 @@
 
 section {
     margin: 0 auto;
+    min-height: 70vh;
     background: lightblue;
     display: grid;
     grid-template-columns: 10% 1fr 10%;
@@ -15,7 +16,7 @@ section {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-
+        
 
         
 }
