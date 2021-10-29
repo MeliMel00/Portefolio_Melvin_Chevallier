@@ -5,30 +5,58 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 55vh 10vh;
-
-    .designer {
+    gap: 2vh;
+    
+    .designer, .developper, .language, .social-network {
         height: 55vh;
-        grid-row: 1;
-        grid-column: 1/3;
         background-color:rgb(102, 99, 99) ;
         text-align: center;
     }
-.desc{
+    .designer {
+        
+        grid-row: 1;
+        grid-column: 1/3;
+        
+    }
+    .desc{
     padding: 15px;
     margin-bottom: 2vh;
-}
-
-.tools{
-    height: auto;
-    .tools-app {
-        display: flex;
-        flex-direction: column;
-        ul {
-            margin: 0.5vh;
-        }
+    height: 5vh;
+    }   
+    .social-network {
+        grid-row: 3;
+        grid-column: 4/ -1;
     }
+    .language {
+        grid-row: 3;
+        grid-column: 1/3;
+    }
+    .tools, .lang, .network{
+        height: auto;
+        margin: 5vh;
+        .logo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 1vh;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3{
+                    display: none;
+                    
+                }
+                :hover{
+                    opacity: 0.8;
+                }
+                
+                
+            }
+        }
+    
 }
-.title-designer, .title-developper {
+.title-designer, .title-developper, .title-language, .title-sn {
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -36,11 +64,8 @@
 }
     
     .developper {
-        height: 55vh;
         grid-row: 1;
         grid-column: 4/-1;
-        background-color:rgb(102, 99, 99) ;
-        text-align: center;
     }
 }
 @media screen and (max-width:800px) {
@@ -48,21 +73,30 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+        
     .container-competence{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
         grid-column: 1;
         grid-row:1;
         gap: 5vh;
-        .designer{
-            grid-column: 1;
-            grid-row: 1;
+
+        .designer, .developper, .language, .social-network{
             height: 65vh;
+            grid-column: 1;
+        }
+        .designer{
+            grid-row: 1;
         }
         .developper{
-            grid-column: 1;
             grid-row: 2;
-            height: 65vh;
+            
+        }
+        .language{
+            grid-row: 3;
+        }
+        .social-network{
+            grid-row: 4;
         }
     }
 }

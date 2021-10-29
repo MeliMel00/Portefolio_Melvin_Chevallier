@@ -9,6 +9,7 @@ header {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 5vh;
         flex-direction: row;
+        text-align: center;
 
         .right {
             grid-column: 5;
@@ -43,15 +44,18 @@ header {
     }
 
     @media screen and (max-width:800px) {
+        .section {
+            min-height: 25vh;
+        }
         nav {
-            font-size: 1.2vh;
+            font-size: 1.05vh;
             display: inline-block;
             grid-template-columns: 1fr;
             
             width: 100%;
             ul {
                 display: inline-block;
-                width: 20vw;
+                width: 22vw;
             }
             .left, .right, .right1 {
                 grid-column: 1;

@@ -1,12 +1,25 @@
 :root {
     --button-color: wheat;
     --main-color: rgb(235, 232, 232);
+    --logo-width: 4vw;
+    --black-width: 2vw;
 }
 a {
     text-decoration: none;
 }
+@font-face {
+    font-family: Fredoka;
+    src: url(fredokaone-regular-webfont.woff);
+}
 * {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: Fredoka ;
+    
+}
+@media screen and (max-width:800px) {
+    :root {
+        --logo-width: 15vw;
+        --black-width: 8vw
+    }
 }
