@@ -1,3 +1,8 @@
+.moutain-image {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
 section {
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -6,6 +11,7 @@ section {
   min-height: 55vh;
   grid-template-columns: 10% 1fr 10%;
   grid-template-rows: auto;
+  background-color: var(--background-color);
 }
 section .item {
   height: 100%;
@@ -22,7 +28,7 @@ section .item {
 .items1 {
   grid-row: 1;
   grid-column: 2;
-  background-color: #504949;
+  color: var(--main-color);
 }
 .items1 .container1 {
   width: 100%;
@@ -30,6 +36,14 @@ section .item {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
+}
+.items1 .container1 .moutain-image {
+  width: 100%;
+  height: 15vh;
+  grid-column: 2/5;
+  grid-row: 2;
+  background-size: 120vh;
+  background-position: center;
 }
 .items1 .container1 .title, .items1 .container1 .title-myself, .items1 .container1 .desc-profil {
   grid-column: 2/5;
@@ -47,27 +61,13 @@ section .item {
   text-align: center;
   font-size: 2.5vh;
 }
-.items1 .container1 .title-myself {
-  grid-row: 2;
-  width: 100%;
-  height: auto;
-}
 .items1 .container1 .desc-profil {
   height: auto;
   width: 100%;
-  margin-top: 55px;
   grid-row: 3;
 }
 .items1 .container1 .desc-profil p {
   padding: 15px;
-}
-
-.items2 {
-  grid-column: 1;
-}
-
-.items3 {
-  grid-column: 3;
 }
 
 .items2, .items3 {
@@ -76,6 +76,11 @@ section .item {
 }
 
 @media screen and (max-width: 800px) {
+  section {
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+  }
+
   .items1 {
     grid-template-columns: 1fr;
   }
@@ -83,9 +88,15 @@ section .item {
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 300px) {
+  section {
+    min-height: 155vh;
+  }
+}
 :root {
   --button-color: wheat;
   --main-color: rgb(235, 232, 232);
+  --background-color: rgba(0, 0, 0, 0.932);
   --logo-width: 4vw;
   --black-width: 2vw;
 }
@@ -113,8 +124,6 @@ a {
 header {
   height: 5vh;
   width: 100%;
-  margin-bottom: 15px;
-  background-color: var(--main-color);
 }
 header nav {
   display: grid;
@@ -122,6 +131,7 @@ header nav {
   grid-template-rows: 5vh;
   flex-direction: row;
   text-align: center;
+  background-color: var(--background-color);
 }
 header nav .right {
   grid-column: 5;
@@ -138,13 +148,14 @@ header nav ul {
   width: 15vw;
   margin: 15px;
 }
+header nav ul :hover {
+  background-color: var(--main-color);
+  color: var(--background-color);
+  box-shadow: 1.6px 3.2px 3.2px rgba(0, 0, 0, 0.45);
+}
 header nav ul a {
   color: white;
   padding: 1vh 1vw 1vh 1vw;
-  background-color: var(--button-color);
-}
-header nav .home a {
-  color: #000;
 }
 @media screen and (max-width: 800px) {
   header .section {
@@ -168,10 +179,29 @@ header nav .home a {
 footer {
   height: 5vh;
   width: 100%;
-  background-color: var(--main-color);
+  background-color: var(--background-color);
 }
 footer p {
   text-align: center;
+  color: var(--main-color);
+}
+
+.container_profil {
+  grid-row: 1;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+.container_profil h1 {
+  padding: 2vh;
+}
+.container_profil img {
+  width: 10vh;
 }
 
 .container-competence {
@@ -184,9 +214,12 @@ footer p {
   gap: 2vh;
 }
 .container-competence .designer, .container-competence .developper, .container-competence .language, .container-competence .social-network {
-  height: 55vh;
-  background-color: #666363;
+  height: 60vh;
+  background-color: #353535;
   text-align: center;
+  border-radius: 1vh;
+  color: var(--main-color);
+  box-shadow: 1.6px 3.2px 3.2px rgba(0, 0, 0, 0.45);
 }
 .container-competence .designer {
   grid-row: 1;
@@ -267,22 +300,6 @@ footer p {
     grid-row: 4;
   }
 }
-.container_profil {
-  grid-row: 1;
-  height: 25vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.container_profil h1 {
-  padding: 2vh;
-}
-.container_profil img {
-  width: 10vh;
-}
-
 .container-gallery {
   height: auto;
   width: 100%;
@@ -331,31 +348,35 @@ footer p {
   }
 }
 .work1 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
 }
 
 .work2 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
 }
 
 .work2 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
 }
 
 .work3 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
 }
 
 .work4 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
 }
 
 .work5 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
 }
 
 .work6 {
-  background-image: url(/image/7789143818_qui-chevauchera-les-dragons-de-daenerys-a-ses-cotes.jpg);
+  background-color: #979797;
+}
+
+.moutain-image {
+  background-image: url(/image/montaigne.SVG\).svg);
 }
 
 .gallery-info {
@@ -372,7 +393,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: wheat;
+  color: var(--main-color);
   grid-column: 3/-1;
 }
 .gallery-info .user-info {
@@ -381,6 +402,7 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: var(--main-color);
 }
 .gallery-info .project-info {
   grid-row: 3;
@@ -388,11 +410,15 @@ footer p {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
-  gap: 15px;
+  color: var(--main-color);
+}
+.gallery-info .project-info ul {
+  margin: 15px;
 }
 .gallery-info .desc-project {
   grid-column: 3/-1;
   grid-row: 2/-1;
+  color: var(--main-color);
 }
 .gallery-info .space {
   grid-column: 3/-1;
@@ -427,6 +453,9 @@ footer p {
     grid-row: 2;
     display: flex;
     flex-direction: row;
+  }
+  .gallery-info .project-info .logo-info img {
+    width: 10vw;
   }
   .gallery-info .desc-project {
     grid-row: 5;

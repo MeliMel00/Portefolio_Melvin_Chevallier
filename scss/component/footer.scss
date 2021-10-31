@@ -1,9 +1,10 @@
 footer {
     height: 5vh;
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--background-color);
 
     p {
         text-align: center;
+        color: var(--main-color);
     }
 }

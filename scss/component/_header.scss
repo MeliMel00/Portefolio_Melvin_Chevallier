@@ -1,8 +1,6 @@
 header {
     height: 5vh;
     width: 100%;
-    margin-bottom: 15px;
-    background-color: var(--main-color);
 
     nav {
         display: grid;
@@ -10,6 +8,7 @@ header {
         grid-template-rows: 5vh;
         flex-direction: row;
         text-align: center;
+        background-color: var(--background-color);
 
         .right {
             grid-column: 5;
@@ -27,20 +26,17 @@ header {
             width: 15vw;
             margin: 15px;
             
+            :hover {
+                background-color: var(--main-color);
+                color: var(--background-color);
+                box-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
+            }
 
             a {
             color: white;
             padding: 1vh 1vw 1vh 1vw;
-            background-color: var(--button-color);
             }
         }
-        
-        .home {
-            a {
-                color: #000;
-            }
-        }
-        
     }
 
     @media screen and (max-width:800px) {
