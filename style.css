@@ -1,8 +1,3 @@
-.moutain-image {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
 section {
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -99,6 +94,10 @@ section .item {
   --background-color: rgba(0, 0, 0, 0.932);
   --logo-width: 4vw;
   --black-width: 2vw;
+}
+
+span {
+  color: #9292f5;
 }
 
 a {
@@ -315,6 +314,7 @@ footer p {
   height: 20vh;
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
 }
 .container-gallery .image h2 {
   color: lavender;
@@ -376,12 +376,12 @@ footer p {
 }
 
 .moutain-image {
-  background-image: url(/image/montaigne.SVG\).svg);
+  background-image: url(./image/montaigne.SVG\).svg);
 }
 
 .gallery-info {
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr) 35vh;
+  grid-template-rows: repeat(2, 1fr) 45vh;
 }
 .gallery-info .iwork1 {
   width: 50%;
