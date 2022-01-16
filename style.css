@@ -4,9 +4,9 @@
   display: block;
   padding-bottom: 5rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
   .title-sect-about {
-    display: none;
+    padding-bottom: 2rem;
   }
 }
 .title-sect-about h2 {
@@ -181,6 +181,7 @@
 }
 @media screen and (max-width: 800px) {
   .upper-hia1 {
+    padding-top: 5rem;
     display: block;
   }
 }
@@ -401,16 +402,17 @@ header .burger .menu-mobile-content span {
 }
 
 footer {
-  height: 5vh;
+  height: 5rem;
   width: 100%;
   background-color: var(--background-color);
+  padding-top: 5rem;
 }
 footer .link_profil_footer {
   display: inline-flex;
   height: 100%;
   width: 100%;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 footer .link_profil_footer a {
   color: var(--main-color);
@@ -469,6 +471,12 @@ footer .link_profil_footer a {
 }
 .section-gallery .title-sect-project {
   color: var(--main-color);
+  padding-bottom: 5rem;
+}
+@media screen and (max-width: 800px) {
+  .section-gallery .title-sect-project {
+    padding-bottom: 2rem;
+  }
 }
 .section-gallery .title-sect-project h2 {
   font-size: 4rem;
@@ -524,7 +532,15 @@ footer .link_profil_footer a {
   padding-bottom: 2rem;
 }
 .desc-project h3 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .desc-project h3 {
+    width: 100%;
+  }
 }
 
 .visu-project {
@@ -554,8 +570,16 @@ footer .link_profil_footer a {
   flex-direction: column;
 }
 .conclu-project h3 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2rem 0;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .conclu-project h3 {
+    width: 100%;
+  }
 }
 .conclu-project .link-project {
   width: 20%;

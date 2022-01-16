@@ -1,14 +1,14 @@
 footer {
-    height: 5vh;
+    height: 5rem;
     width: 100%;
     background-color: var(--background-color);
-
+    padding-top: 5rem;
   .link_profil_footer{
       display: inline-flex;
       height: 100%;
       width: 100%;
       justify-content: center;
-      align-items: flex-end;
+      align-items: center;
       a{
         color: var(--main-color);
         margin-left: 1rem;

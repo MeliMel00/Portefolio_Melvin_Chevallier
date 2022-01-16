@@ -4,8 +4,8 @@
     color: var(--main-color);
     display: block;
     padding-bottom: 5rem;
-    @include s{
-        display: none;
+    @include xs {
+        padding-bottom: 2rem;
     }
     h2{
         font-size: 3rem;
@@ -169,6 +169,7 @@
 .upper-hia1{
     display: none;
     @include xs {
+        padding-top: 5rem;
         display: block;
     }
 }
