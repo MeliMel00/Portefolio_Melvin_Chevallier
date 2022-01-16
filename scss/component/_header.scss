@@ -1,60 +1,75 @@
+@import  "../mixins/mixins";
+
 header {
-    height: 5vh;
+    height: auto;
     width: 100%;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    opacity: 1;
+    border-bottom: 1px solid #fafafa;
     nav {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 5vh;
-        flex-direction: row;
-        text-align: center;
+        height: 5rem;
+        display: inline-flex;
         background-color: var(--background-color);
-
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
         .right {
-            grid-column: 5;
-        }
-        .right1 {
-            grid-column: -1;
-        }
-        .left {
-            grid-column: 1;
-        }
-        
-        ul {
-            display: block;
-            text-align: center;
-            width: 15vw;
-            margin: 15px;
-            
-            :hover {
-                background-color: var(--main-color);
-                color: var(--background-color);
-                box-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
+            display: inline-flex;
+            @include xs {
+                display: none;
             }
-
-            a {
-            color: white;
-            padding: 1vh 1vw 1vh 1vw;
+            ul{
+                margin-left: 3rem;
+            }
+        }
+        .burger-open{
+            display: none;
+            width: auto;
+            height: 2rem;
+            @include xs {
+                display: block;
+            }
+            img{
+                height: 2rem
             }
         }
     }
 
-    @media screen and (max-width:800px) {
-        .section {
-            min-height: 25vh;
+    
+    .burger{
+        background-color: var(--background-color);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+        height: 100vh;
+        z-index: 2000;
+        opacity: 1;
+        .burger-close{
+            position: absolute ;
+            right: 5%;
+            top: 2.5%;
+            color: white;
+            font-size: 2rem;
         }
-        nav {
-            font-size: 1.05vh;
-            display: inline-block;
-            grid-template-columns: 1fr;
-            
+        .menu-mobile-content{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             width: 100%;
-            ul {
-                display: inline-block;
-                width: 22vw;
+            align-items: center;
+            justify-content: center;
+            a{
+                margin-top: 3rem;
             }
-            .left, .right, .right1 {
-                grid-column: 1;
+            span {
+                font-size: 3.5rem;
+                padding-top: 1.5rem;
+                color: white;
             }
         }
     }

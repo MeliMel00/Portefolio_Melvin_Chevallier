@@ -1,26 +1,46 @@
 :root {
     --button-color: wheat;
     --main-color: rgb(235, 232, 232);
-    --background-color: rgba(0, 0, 0, 0.932);
+    --skill-color: rgb(131, 118, 118);
+    --background-color: black;
     --logo-width: 4vw;
     --black-width: 2vw;
 }
-span {
-    color: rgb(146, 146, 245);
-}
+
 a {
     text-decoration: none;
+    color: initial;
+    color: var(--main-color);
 }
-@font-face {
-    font-family: Fredoka;
-    src: url(fredokaone-regular-webfont.woff);
+h2{
+    font-size: 1.7rem;
 }
+h3{
+    font-size: 1.5rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
 * {
     padding: 0;
     margin: 0;
-    font-family: Fredoka ;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-color);
+    cursor: none;
     
 }
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 2000;
+  
+    transition: transform 0.2s;
+  }
+  
 @media screen and (max-width:800px) {
     :root {
         --logo-width: 15vw;
