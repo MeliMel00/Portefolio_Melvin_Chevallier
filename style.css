@@ -40,11 +40,11 @@
   }
 }
 .about_section .about_title h2, .about_section .about_title span {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 @media screen and (max-width: 800px) {
   .about_section .about_title h2, .about_section .about_title span {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 .about_section .about_title span:nth-of-type(1) {
@@ -79,12 +79,10 @@
 .moutain-image {
   width: 100%;
   height: 15vh;
-  grid-column: 2/5;
-  grid-row: 2;
   background-size: 120vh;
   background-position-y: top;
   background-position-x: center;
-  background-image: url(./image/Sans-titre---2.gif);
+  background-image: url(./image/Sans--titre---2.gif);
   background-size: 75%;
   background-repeat: no-repeat;
 }
@@ -122,7 +120,7 @@
   }
   .announce .announce_container p {
     white-space: nowrap;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-left: 1rem;
     text-transform: uppercase;
     color: var(--main-color);
@@ -214,7 +212,7 @@
 }
 .how-i-am .about_paragraph p {
   padding-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 1024px) {
   .how-i-am .about_paragraph p {
@@ -226,7 +224,7 @@
   padding-bottom: 2rem;
 }
 .how-i-am .about_paragraph span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: blue;
 }
 .how-i-am .my-skills {
@@ -235,7 +233,7 @@
   gap: 3rem;
   width: 45%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
   .how-i-am .my-skills {
     flex-direction: column;
     width: 100%;
@@ -249,6 +247,7 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
+  max-width: fit-content;
 }
 .how-i-am .my-skills ul h2, .how-i-am .my-skills ul h3 {
   color: var(--background-color) !important;
@@ -479,7 +478,7 @@ footer .link_profil_footer a {
   }
 }
 .section-gallery .title-sect-project h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
 }
 .section-gallery .container-gallery {
